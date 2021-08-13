@@ -1,0 +1,98 @@
+*{
+    align-items: center;
+    position:static;
+    font-family:Century Gothic;
+    font-size:small;
+    
+} 
+body{
+    margin: 50px;
+}
+table{
+    border-collapse:collapse;
+    column-width: 100px;
+}
+th, td {
+   padding: 8px;
+   text-align: left;
+   border-bottom: 1px solid #ddd;    
+ }
+ tr:nth-child(even) {
+    background-color: rgb(224, 223, 223);
+ }
+ .rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > rate.input:checked + rate.label:hover,
+.rate > rate.input:checked + rate.label:hover ~ label,
+.rate > rate.input:checked ~ rate.label:hover,
+.rate > rate.input:checked ~ rate.label:hover ~ label,
+.rate > rate.label:hover ~ rate.input:checked ~ label {
+    color: #c59b08;
+} 
+
+#first,#second{
+    width: 290px;
+    height: 20px;
+}
+
+#mail
+{
+    width: 600px;
+    height: 20px;
+}
+.required{
+    color: red;
+}
+
+.overall{
+    padding-top: 70px;
+}
+ .formclass
+ {
+     width: 800px;
+     align-items: center;
+     height: 1000px;
+     inset-block: 10px;
+     line-height: 20px;
+     outline-style: auto;
+     padding:10px;
+     padding-bottom: 10px;
+ }
+
+ .first , .last , .maillabel{
+    color: gray;
+ }
+.last{
+    position:absolute;
+   left: 370px;
+}
+
+.column1{
+    width:40px;
+}
